@@ -1,46 +1,92 @@
-# Getting Started with Create React App
+# React Typescript Project Template
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using typescript template.
+
+## How To Use
+
+Simply use this repo as a template for your own repo. After that clone the repo to your local and run `yarn install` to install all the dependencies here.
+
+## What's Inside
+
+* react 17
+* react-dom 17
+* typescript
+* axios
+* react-helmet
+* styled-component
+* eslint (airbnb rules with some modified configurations)
+* storybook
+* react-router-dom v6
 
 ## Available Scripts
 
-In the project directory, you can run:
+- **`yarn start` - starts the project. Use [http://localhost:3000](http://localhost:3000) to view it in the browser.**
+- **`yarn build` - builds the project. It will bundle react in production and all will be stored under `build` folder.**
+- **`yarn test` - launches the test runner.**
+- **`yarn eject` - only run this if you aren't satisfied with the build tools and config choices.**
+- **`yarn storybook` - starts the storybook / component explorer in the browser.**
+- **`yarn build-storybook`- publishes the storybook as a static web application.**
 
-### `npm start`
+## Folder Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To keep the project clean, we need to standarize the common project folders, so this template will have as below for starters
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+ .vscode/
+├─ settings.json
+.storybook/
+├─ preview.js
+├─ main.js
+public/
+src/
+├─ components/
+│  ├─ component/
+│  │  ├─ index.ts
+│  │  ├─ types.ts
+│  │  ├─ styled.tsx
+│  │  ├─ component.tsx
+│  │  ├─ component.stories.tsx
+├─ pages/
+│  ├─ index.ts
+│  ├─ landing.tsx
+│  ├─ notfound.tsx
+├─ test/
+│  ├─ App.test.tsx
+├─ utils/
+globalStyles.ts
+App.tsx
+index.tsx
+react-app-env.d.ts
+reportWebVitals.ts
+setupTests.ts 
+```
 
-### `npm test`
+Please note that ideally we need to develop component, so in each components will be developed on its own sub-directory. For example 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+components/
+├─ componentA/
+│  ├─ index.ts
+│  ├─ types.ts
+│  ├─ styled.tsx
+│  ├─ componentA.tsx
+│  ├─ componentA.stories.tsx
+├─ componentB/
+│  ├─ index.ts
+│  ├─ types.ts
+│  ├─ styled.tsx
+│  ├─ componentB.tsx
+│  ├─ componentB.stories.tsx
+```
 
-### `npm run build`
+You can take a look in the template, I already created one common component as an example.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Useful Resources
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* [React documentation](https://reactjs.org/)
+* [Airbnb lint](https://github.com/airbnb/javascript)
+* [React typescript cheatsheets](https://github.com/typescript-cheatsheets/react)
+* [Storybook documentation](https://storybook.js.org/docs/react/get-started/introduction)
+* [React router](https://reactrouter.com/docs/en/v6)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[^1]: This project template will always be updated
